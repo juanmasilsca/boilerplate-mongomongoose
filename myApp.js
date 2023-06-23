@@ -6,6 +6,17 @@ mongoose.connect('mongodb+srv://juanmasilsca:1rHXWZE3yS6lMUhB@cluster0.kmccri2.m
 
 let Person;
 
+const personSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  age: Number,
+  favouriteFoods: [String]
+});
+
+Person = mongoose.model('Juan', personSchema);
+
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
 };
