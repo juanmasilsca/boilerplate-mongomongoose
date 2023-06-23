@@ -13,19 +13,19 @@ const personSchema = new Schema({
 
 const Person = mongoose.model("Person", personSchema);
 
-// let newPerson = new Person({
-//   name: 'Jota',
-//   age: 36,
-//   favoriteFoods: ["Peanut butter", "Yogurt"]
-// });
+let newPerson = new Person({
+  name: 'Jota',
+  age: 36,
+  favoriteFoods: ["Peanut butter", "Yogurt"]
+});
 
-// newPerson.save()
-//   .then((doc) => {
-//     console.log(doc);
-//   })
-//   .catch((err) => {
-//     console.error(err);
-//   });
+newPerson.save()
+  .then((doc) => {
+    console.log(doc);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 
 const createAndSavePerson = ((done) => {
   let newPerson = new Person({
